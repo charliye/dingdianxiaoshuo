@@ -45,7 +45,7 @@ class Sql:
     @classmethod
     def insert_dd_chaptername(cls, xs_chaptername, xs_content, id_name, num_id, url):
         sql = 'INSERT INTO dd_chaptername(`xs_chaptername`, `xs_content`, `id_name`, `num_id`, `url`) \
-             VALUES (%(xs_chaptername)s, %(xs_content)s, %(id_name)s, %(num_id)s, %(url)s)'
+        VALUES (%(xs_chaptername)s, %(xs_content)s, %(id_name)s, %(num_id)s, %(url)s)'
         value = {
             'xs_chaptername': xs_chaptername,
             'xs_content': xs_content,
