@@ -91,5 +91,5 @@ class Myspider(scrapy.Spider):
             item['chaptercontent'] = content
             #print content
             #print item
-        return item
+        yield item
 
