@@ -31,7 +31,17 @@ class Sql:
         }
         cur.execute(sql, value)
         return cur.fetchall()[0]
-
+    
+    @classmethod
+    def id_name(cls, xs_name):
+        sql = 'SELECT id FROM dd_name WHERE xs_name=%(xs_name)s'
+        value = {
+            'xs_name': xs_name
+        }
+        cur.execute(sql, value)
+        for name_id in cur:
+            return name_id[0]
+    
     @classmethod
     def insert_dd_chaptername(cls, xs_chaptername, xs_content, id_name, num_id, url):
         sql = 'INSERT INTO dd_chaptername(`xs_chaptername`, `xs_content`, `id_name`, `num_id`, `url`) \
